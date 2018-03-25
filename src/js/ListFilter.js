@@ -13,8 +13,10 @@ class ListFilters extends Component {
     componentWillMount() {
         database.ref().once('value')
             .then((snapshot) => {
-                const values = Object.values(snapshot.val());
-                this.setState(() => ({ studentList: values }));
+                if (snapshot.val()) {
+                    const values = Object.values(snapshot.val());
+                    this.setState(() => ({ studentList: values }));
+                }
             })
     }
     handleChange = (event) => {

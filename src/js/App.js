@@ -4,6 +4,8 @@ import ListFilter from './ListFilter';
 import ListAll from './ListAll';
 import { database } from '../firebase/firebase';
 
+import { Container } from 'semantic-ui-react';
+
 class App extends Component {
     realParser = (result) => {
         const finalResult = result.map((value) => {
@@ -40,11 +42,18 @@ class App extends Component {
     }
     render() {
         return (
-            <div>
-                <input type="file" onChange={this.fileName} />
+            <Container>
+                <br /><br /><br />
+                <div>
+                    <label htmlFor="file" className="ui inverted green button fluid">
+                        <i className="file icon"></i>
+                        Let's choose a file to upload</label>
+                    <input type="file" onChange={this.fileName} id="file" style={{ display: "none" }} />
+                </div>
+                <br /> <br />
                 <ListFilter />
                 <ListAll />
-            </div>
+            </Container>
         );
     }
 }
