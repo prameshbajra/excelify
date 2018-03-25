@@ -6,12 +6,19 @@
         "jest"
     ],
     "dependencies": {
+        "axios": "^0.18.0",
         "eslint-plugin-jest": "^21.5.0",
+        "firebase": "^4.12.0",
         "node-sass-chokidar": "0.0.3",
         "npm-run-all": "^4.1.2",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
-        "react-scripts": "1.0.17"
+        "react-firebase-file-uploader": "^2.4.1",
+        "react-scripts": "1.0.17",
+        "xls-to-json": "^0.4.0",
+        "xlsx": "^0.12.6",
+        "xlsx-parse-json": "0.0.3",
+        "xlsx-to-json": "^0.3.0"
     },
     "scripts": {
         "start": "react-scripts start",

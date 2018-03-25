@@ -2,8 +2,10 @@
     "extends": "airbnb",
     "env": {
         "browser": true,
-        "node": true
+        "node": true,
+        "es6": true
     },
+    "parser": "babel-eslint",
     "rules": {
         "indent": [2, 4],
         "react/jsx-indent": [2, 4],
