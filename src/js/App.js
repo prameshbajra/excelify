@@ -8,13 +8,13 @@ class App extends Component {
             if (value[0] && value[0].length === 10) {
                 return {
                     regdNo: value[0],
-                    name: value[1] ? value[1].toUpperCase() : 'N/A',
-                    dues: value[2] || 'N/A'
+                    name: value[1] ? value[1].toUpperCase() : "Not Available",
+                    dues: value[2] ? value[2] : "Not Available",
+                    company: value[3] ? value[3] : "Not Available"
                 }
             }
             return {};
         });
-        console.log(finalResult);
         const arrayToObject = (finalResult) =>
             finalResult.reduce((obj, item) => {
                 obj[item.regdNo] = item
