@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { database } from '../firebase/firebase';
 
+import { List, Grid, Card, Feed, Button } from 'semantic-ui-react';
+
 class ListAll extends Component {
     constructor(props) {
         super(props);
@@ -25,18 +27,52 @@ class ListAll extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.viewAll}>View All</button>
-                {
-                    this.state.studentList.sort().map((student, i) => (
-                        <div key={i}>
-                            Name: {student.name}
-                            <br />
-                            Regd No : {student.regdNo}
-                            <br />
-                            Dues : {student.dues}
-                        </div>
-                    ))
-                }
+                <Button inverted color='green' content="View All" onClick={this.viewAll} fluid></Button>
+                <br /><br />
+                <div className="row">
+                    {
+                        this.state.studentList.sort().map((student, i) => (
+                            <div className="col-md-4" key={i}>
+                                <Card>
+                                    <Card.Content>
+                                        <Feed>
+                                            <Feed.Event>
+                                                <Feed.Content>
+                                                    <Feed.Summary>
+                                                        Registration Number : {student.regdNo}
+                                                    </Feed.Summary>
+                                                </Feed.Content>
+                                            </Feed.Event>
+                                            <hr />
+                                            <Feed.Event>
+                                                <Feed.Content>
+                                                    <Feed.Summary>
+                                                        Student Name : {student.name}
+                                                    </Feed.Summary>
+                                                </Feed.Content>
+                                            </Feed.Event>
+                                            <Feed.Event>
+                                                <Feed.Content>
+                                                    <Feed.Summary>
+                                                        Company : {student.company}
+                                                    </Feed.Summary>
+                                                </Feed.Content>
+                                            </Feed.Event>
+                                            <Feed.Event>
+                                                <Feed.Content>
+                                                    <Feed.Summary>
+                                                        Dues : {student.dues}
+                                                    </Feed.Summary>
+                                                </Feed.Content>
+                                            </Feed.Event>
+                                        </Feed>
+                                    </Card.Content>
+                                </Card>
+                                <br />
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         );
     }
