@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import * as XLSX from 'xlsx';
+import ListFilter from './ListFilter';
+import ListAll from './ListAll';
 import { database } from '../firebase/firebase';
 
 class App extends Component {
@@ -40,6 +42,8 @@ class App extends Component {
         return (
             <div>
                 <input type="file" onChange={this.fileName} />
+                <ListFilter />
+                <ListAll />
             </div>
         );
     }
