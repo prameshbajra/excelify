@@ -42,7 +42,7 @@ class App extends Component {
     }
     render() {
         return (
-            <Container>
+            <Container fluid>
                 <br /><br /><br />
                 <div>
                     <label htmlFor="file" className="ui inverted green button fluid">
@@ -53,11 +53,13 @@ class App extends Component {
                 <br /> <br />
                 <ListFilter />
                 <ListAll />
-                <Label as='a' style={{
-                    position: "absolute", bottom: "10px"
-                }} basic color='red' pointing>
-                    The app currently only works with certain structured excel files. This will be changed later. The search is done in reference to registration number. The app will only take time to load for the first time.
+                <h1 className='text-center'>
+                    <Label as='a' style={{
+                        bottom: "10px"
+                    }} basic color='red' pointing>
+                        The app currently only works with certain structured excel files. This will be changed later. The search is done in reference to registration number. The app will only take time to load for the first time.
                         </Label>
+                </h1>
             </Container>
         );
     }
