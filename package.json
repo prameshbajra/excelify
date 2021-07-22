@@ -18,7 +18,7 @@
         "semantic-ui-css": "^2.3.1",
         "semantic-ui-react": "^0.79.0",
         "xls-to-json": "^0.4.0",
-        "xlsx": "^0.12.6",
+        "xlsx": "^0.17.0",
         "xlsx-parse-json": "0.0.3",
         "xlsx-to-json": "^0.3.0"
     },
